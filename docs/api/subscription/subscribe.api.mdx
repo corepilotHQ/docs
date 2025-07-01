@@ -1,0 +1,71 @@
+---
+id: subscribe
+title: "Subscribe"
+description: "Subscribe to a subscription plan for the user."
+sidebar_label: "Subscribe"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVctu2zAQ/BViz4ztFDnp5hQtkB7aoHHQg+EDJa4tJhLJkMvUjqB/L5ayE9UOAhfoxZbE0exjZlcdaIxVMJ6Ms1DAXSr5tkRBTigRh9t8KnyjrFi7IKhGkSKGCUiIWKVgaAfFsgNVVRjjwj2ihWK56lcSAj4ljHTt9A6KLt+agBoKCgklVM4SWuIj5X1jKsWhpg+Rs+kgVjW2iq9o5xEKcOUDVgQSfHAeAxmMfMqpjVCRgrEbkEfFLWoUVrUo3DrXcFLdBPpejnJcDsSrvh+eR+9sHCJ+ml3y33H3cgPWqWl2B/YSNfeS4w0h/lvRSuuAMZ5X9x58KH2Qr5f/sXMSnpKjcd42tSWGd8ky9Ay2+8g6nM+YIuqPaXHrTcA4p/OqzvCsjyDTYiTV+g/9M3jlajY7tce10mI/D+JCGPusGqOHsXLhbzatSEHmecdm91Ylql0wL6gH0NUp6LsjsXbJ6uzpFql2GgrwLmYnKaqhgOk46PTVsXmuwzOGmMc6hQYKqIl8LKZT5c1FJLUxdjMpL682k+3uZVq5gN40joCH/rAU7tjJe7OOV8Nr45mTg2UcFFCiClnf4eKrC60iKODbr0Uug0fk59tG+bJVrW/wbQMclOwlGLt2OZIhRsDnQ4ZifntzIvX89kZoV6UWLQ1qH+O5GwP2cjKbzPLsuEjtMD48HOP1eRygexv6f9+x+2YRbmnqG2UsB8+idHshlzBm4Y6+JrKSULPmxRK6rlQR70PT9/z4KWHgvb2S8KyCUSX3abnqJdSoNIas/SPucvNy8hcLzoThTeKMTrZXLw9vzKsKPX2IXY1sefvjbsGy7z8TrdP8TlC/QebfAkCCy9VlO+VnHTTKbpLaMHbgZJPwcIw8duSpXNX+SNndKMOuGxDZpH0Pcl8KZdP2/BX4A4cwgI4=
+sidebar_class_name: "post api-method"
+info_path: docs/api/subscription/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Subscribe"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/subscription/subscribe"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Subscribe to a subscription plan for the user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"plan":{"type":"string","description":"The name of the subscription plan."}},"required":["plan"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Successfully subscribed to the plan.","content":{"application/json":{"schema":{"type":"object","properties":{"address":{"type":"string","description":"The address of the user."},"plan":{"type":"string","description":"The name of the subscription plan."},"quota":{"type":"number","description":"The quota of the subscription plan."},"quotaUsed":{"type":"number","description":"The quota used of the subscription plan."},"expiresAt":{"type":"string","description":"The expiration timestamp of the subscription plan."}}}}}},"400":{"description":"Bad request - invalid plan or subscription data"},"401":{"description":"Unauthorized"},"404":{"description":"Not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

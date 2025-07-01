@@ -1,0 +1,89 @@
+openapi: 3.0.0
+info:
+  title: Corepilot API
+  description: API documentation Corepilot API
+  version: 1.0.0
+servers:
+  - url: https://api-staging.b14g.xyz/corepilot
+components:
+  securitySchemes:
+    accessToken:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - accessToken: []
+paths:
+  /api-key:
+    post:
+      summary: Create API Key
+      description: Create an API key for the user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the API key.
+                expiresTime:
+                  type: number
+                  description: The expiration days of the API key.
+              required:
+                - name
+                - expiresTime
+      responses:
+        "201":
+          description: API key created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the API key.
+                  prefix:
+                    type: string
+                    description: The prefix of the API key.
+                  key:
+                    type: string
+                    description: The key of the API key.
+                  address:
+                    type: string
+                    description: The address of the user.
+        "400":
+          description: Bad request - max API keys per address reached
+        "401":
+          description: Unauthorized
+    get:
+      summary: Get API Key List
+      description: Get the list of API keys for the user.
+      responses:
+        "200":
+          description: API keys retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the API key.
+                    prefix:
+                      type: string
+                      description: The prefix of the API key.
+                    expiresAt:
+                      type: string
+                      description: The expiration timestamp of the API key.
+                    address:
+                      type: string
+                      description: The address of the user.
+        "400":
+          description: Bad request - max API keys per address reached
+        "401":
+          description: Unauthorized

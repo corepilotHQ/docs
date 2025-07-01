@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  title: Corepilot API
+  description: API documentation Corepilot API
+  version: 1.0.0
+servers:
+  - url: https://api-staging.b14g.xyz/corepilot
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - apiKey: []
+paths:
+  /apy/next-round:
+    get:
+      summary: Get Next Round APY
+      description: Get the next round APY.
+      responses:
+        "200":
+          description: Successfully retrieved next round APY.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    validator:
+                      type: string
+                      description: The validator address.
+                    core:
+                      type: number
+                      description: The core APY.
+                    btc:
+                      type: number
+                      description: The BTC APY.
+                    avgHashReward:
+                      type: string
+                      description: The average hash reward.
+        "400":
+          description: Bad request - invalid API key
+  /apy/next-2-round:
+    get:
+      summary: Get Next 2 Round APY
+      description: Get the next 2 round APY.
+      responses:
+        "200":
+          description: Successfully retrieved next 2 round APY.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    validator:
+                      type: string
+                      description: The validator address.
+                    core:
+                      type: number
+                      description: The core APY.
+                    btc:
+                      type: number
+                      description: The BTC APY.
+                    avgHashReward:
+                      type: string
+                      description: The average hash reward.
+        "400":
+          description: Bad request - invalid API key

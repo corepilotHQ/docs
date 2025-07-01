@@ -1,0 +1,71 @@
+---
+id: sign-in
+title: "Sign in"
+description: "Sign in to the Corepilot API."
+sidebar_label: "Sign in"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlE1v2zAMhv+KwLNip0NPvqXDDj0tWLNTkINiM7ZaW1IlKk1m+L8PlJPWS4J9APPFXy9fUQ9J9VBhKL12pK2BAp50bYQ2gqygBsVn69Hp1pJYLB8zkODxNWKgB1sdoejTq/ZYQUE+ooTSGkJD/Es51+pSsW/+HNi8h1A22Cl+oqNDKMBun7EkkOC8dehJY0g6XRtF0eNEGshrU4O8SHjVoHiXC7tLaceAPoOBtapqtZn6mNht0d/0OavPNu++GQyDnGx2PclwsshmGEZdcNaEcSuf5nO+XVCOZYkh7GLbHtMqWAltmO9/AqiS/8q+oPk7hGOAII64ouhx5zE0/2B3irjpN4yU7m+BeVCVOLWYmE3qigfH5IX1Qpu9anU1lqRDamwFBTgbEgVFDRSQq0hNzuEzbUBCQL9HH6BY9xB9CwU0RC4Uea6cngVStTZ1tr27r7PD8Udenrseho0EZv/to+2/HFTnWrxo0ymMc8vNBwna7GxCpolj4JeBukK3WD6KypaxQ0Op8OJSz9sYtXfZPJtzdXjrnUqFMarDjyG+tO8/uuuPc34qMeGBctcqbXilhK4/QV4DQ2a4J8wbCQ1XoVhD329VwO++HQb+/BrRH6FYbyTslddqyyjWm0FCg6pCn+rygsfEJ2U4W/H6LG8j53E1C4M8RyzKEh39VruZNMry69MKJGxPB1hnK47x6o0PN/UGBYAEm4ilSUrfemiVqaOqWTt68vUTn4TOdQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api/auth/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sign in"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/sign-in"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sign in to the Corepilot API.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"signature":{"type":"string","description":"The signature of the user."},"deadline":{"type":"number","description":"The deadline of the signature."}},"required":["signature","deadline"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully signed in.","content":{"application/json":{"schema":{"type":"object","properties":{"accessToken":{"type":"string","description":"The access token of the user."},"refreshToken":{"type":"string","description":"The refresh token of the user."}}}}}},"400":{"description":"Bad request - signature expired or invalid."}}}
+>
+  
+</StatusCodes>
+
+
+      

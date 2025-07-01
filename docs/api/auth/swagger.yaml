@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Corepilot API
+  description: API documentation Corepilot API
+  version: 1.0.0
+servers:
+  - url: https://api-staging.b14g.xyz/corepilot
+paths:
+  /auth/sign-in:
+    post:
+      summary: Sign in
+      description: Sign in to the Corepilot API.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                signature:
+                  type: string
+                  description: The signature of the user.
+                deadline:
+                  type: number
+                  description: The deadline of the signature.
+              required:
+                - signature
+                - deadline
+      responses:
+        "200":
+          description: Successfully signed in.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                    description: The access token of the user.
+                  refreshToken:
+                    type: string
+                    description: The refresh token of the user.
+        "400":
+          description: Bad request - signature expired or invalid.
+  /auth/refresh-token:
+    post:
+      summary: Refresh token
+      description: Refresh the access token of the user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+                  description: The refresh token of the user.
+              required:
+                - refreshToken
+      responses:
+        "201":
+          description: Successfully refreshed token.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                    description: The access token of the user.
+                  refreshToken:
+                    type: string
+                    description: The refresh token of the user.
+        "400":
+          description: Bad request - invalid refresh token

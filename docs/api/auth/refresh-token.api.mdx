@@ -1,0 +1,71 @@
+---
+id: refresh-token
+title: "Refresh token"
+description: "Refresh the access token of the user."
+sidebar_label: "Refresh token"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlMFymzAQhl+F2bNs7E5OujmdHnKqJ3FPDAcZ1qAEJEVaHFOGd++swI0dTzvtTLgA4tfuv9+uGKDEUHjtSFsDEh7x4DHUCdWYqKLAEBKyL2gSe4hrXUC/BAEeXzsMdG/LHuQQX7XHEiT5DgUU1hAa4k/KuUYXiuOnz4GTDBCKGlvFT9Q7BAl2/4wFgQDnrUNPGsMUNrrZsYMLdSCvTQXig/ddjYk/+781PY7iwmd2HTwfx+l7cNaEKfuX1Zpv10meukjl0DVNf86G5ZSPwXxS5RP7/yj8z82KZX0qx4nV3Wp1i+delck8G8ki0eaoGl1eR4uNaJFqW4IEZ0OsXlENElLVUZ3O8sUkFxDQH9EHkNkAnW9AQk3kgkxT5fQikKq0qZb79V21PPU/08J6dLqxBGMugMk/vk/rt5NqXYO303WmMQrQ5mAjJk2shK/ngMlm+3CDa7N9SEpbdC0ais1OPurZ/KRdL1fLFafgslsVm2FUi5cnby76KsnwPlf/fETnJhOeKHWN0obzRnzDjDsDxg2/52MGnguouSsyg2HYq4A/fDOOvPzaoe9BZrmAo/Ja7RlPlo8CalQl+tihF+wjs+h3sWMXLG86dnNzJkZx3rEpCnT0V21+MTjb7087ELCf/0CtLXmPV29cj3oDCSDARn7Tv4TXBmiUqTpVsXaKydcvf7C/VA==
+sidebar_class_name: "post api-method"
+info_path: docs/api/auth/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Refresh token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/refresh-token"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Refresh the access token of the user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"refreshToken":{"type":"string","description":"The refresh token of the user."}},"required":["refreshToken"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Successfully refreshed token.","content":{"application/json":{"schema":{"type":"object","properties":{"accessToken":{"type":"string","description":"The access token of the user."},"refreshToken":{"type":"string","description":"The refresh token of the user."}}}}}},"400":{"description":"Bad request - invalid refresh token"}}}
+>
+  
+</StatusCodes>
+
+
+      

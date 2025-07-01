@@ -1,0 +1,63 @@
+---
+id: get-next-round-apy
+title: "Get Next Round APY"
+description: "Get the next round APY."
+sidebar_label: "Get Next Round APY"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNU8Fu2zAM/RWBZ8dOh558S4uhKwoMQZsBG4ocaJu11dmSKtFePMP/PtBO0iwLhvpiQeSjyPceBygo5F471tZACnfEiitShnasvG1NoVbrHzFE4Ck4awIFSAf4tFzK72/sU5vnFMJLW9e98sReU0fFhVK5NUyGpQI6V+scpULyGqTMACGvqEE5ce8IUkDvsYcINFMTTu5t9ko5QwTOW0ee9dxch7UukK0/SQ3stSkhOmt5U5E6pissCk8hxDBKj55O8KZtMvIX8ZI5TzZGkHH+MdTN5vYIwq78gqF6pF/oi481jR15LElVGCrlJ2AM4/xFcH1JnhsslKe3lgKrhdJmmlut1vfqJ/UgsIa4sgWkUNLEKnIFKSTo+kREXEwiQgSBfEc+QPo8QOtrSKFidiFNEnR6ERhLbco4u7ou413/OxGCnK4tw7gVcN56zf2ERqcfSI7b09CTGGDW8pDw7oX5IgItM1WExUSwwUai3xer9f3iYT+PNi92gmquJXp7aESm/odWYaKweduQ4cmQ6jxfhp5zr+JlvBTpnA3c4GTbfQuyQV/F8o8Hy5+/NLwvwH/2bT8v044TV6M28tzE9rBX5hnQCRMn2mwjqGxgiQ1DhoG++Xoc5fqtJT8RHUGHXmMmjDxvx+jAocghRkhhlefkxAAd1u3M+dmSilhHs9x93sA4/gFkb3OT
+sidebar_class_name: "get api-method"
+info_path: docs/api/apy/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Next Round APY"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/apy/next-round"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the next round APY.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved next round APY.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"validator":{"type":"string","description":"The validator address."},"core":{"type":"number","description":"The core APY."},"btc":{"type":"number","description":"The BTC APY."},"avgHashReward":{"type":"string","description":"The average hash reward."}}}}}}},"400":{"description":"Bad request - invalid API key"}}}
+>
+  
+</StatusCodes>
+
+
+      

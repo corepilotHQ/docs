@@ -1,0 +1,71 @@
+---
+id: get-apr-history-by-validator-address
+title: "Get APR history by validator address"
+description: "Get the APR history by validator address."
+sidebar_label: "Get APR history by validator address"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWBpw1w4nRoL76lxVAUxYCi7YABRQ6yzMbqbEmV6CCe4X8fKDtJm6Rb44ttSe/pkXxkBwUG5bUjbQ1kcI0kqEQxv7sXpQ5kfSvyVqxkpQtJ1gtZFB5DmEICTnpZI6EPkD11YGSNkMF4ABLQTOgklZCAx9dGeywgI99gAkGVWEvIOqDWMSyQ12YJfbIn6LHEY7f3C+YMzpqAgWm+zWb8eg9+aJTCEJ6bqmqFR/IaV1h8KjhlDaEh5pTOVVpJ5kxfAhN3h/ql97LloAnr8Gbd5i+oiLPlrUNPepBL1l1cWY9z5w+TcCwHZJ24EMr6WJspJ4o5LkmdSHH5eLVlYLofcv2ewTR1jv4oQ7y+lustQU7qFDzfvQ/X5tMBRLg27+WfgB/kbwmGJ4HzY9a5lIVg02IgMRHaRJOI+d2N+I0tMKxGKm0BGSwx1peNnkE6GivtRjP1kEBAv9q0SeMryKAkciFLU+n0JJBcarOc5mfny+m6/ZOyTqcrS9HmAVXjNbURLZ2+Rf5cvN16YDcOxtoc2BlzWBjbsURZxOKM3fprMr+7mdyOIWnzbCNUU8W7VxshHPhBSjkZhVVNjYZid4j98xz0cPZsOpvOuGbOBqpl7KFRAo+c/3Xk/t3drj9PGlljTgjXlLpKasOSYkW6sYBPMHJAAtnm9kUCpQ3Eu12Xy4A/fdX3vPzaoI/lSGAlvZY55+2pg0IH/i4ge5ZVwH/I/3I/jsav4oNZ94HsTX0NS13JquE/SID9uRvD/aJPNlVnYcPuXCl09AZ3MOPYXluHX39/hL7/C1EAGCM=
+sidebar_class_name: "get api-method"
+info_path: docs/api/history/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get APR history by validator address"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/history/{address}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the APR history by validator address.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"address","in":"path","required":true,"schema":{"type":"string"},"description":"The validator address."}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved APR history by validator address.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"top5CoreApr":{"type":"string","description":"The top 5 core APR."},"top5BtcApr":{"type":"string","description":"The top 5 BTC APR."},"coreMaxApr":{"type":"number","description":"The core max APR."},"btcMaxApr":{"type":"number","description":"The BTC max APR."},"btcMinApr":{"type":"string","description":"The BTC min APR."},"coreMinApr":{"type":"string","description":"The core min APR."}}}}}}},"400":{"description":"Bad request - invalid API key"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-api-key
+title: "Create API Key"
+description: "Create an API key for the user."
+sidebar_label: "Create API Key"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1v2zAM/SsGz2o+hp58a4sN2HZYsabYIfCBsZlYrS2plNzGNfzfB8pOkzTBkONyiW09PlLvkeygIJ+zdkFbAyncMWGgBE1yc/89eaY2WVtOQklJ44knoIDppSEfbm3RQtrFV81UQBq4IQW5NYFMkCN0rtI5CvP0yQt9Bz4vqUZ5Cq0jSMGunigPoMCxdcRBk5dTgzUdoHxgbTagPlW7KCkRZGLXscax5gn0CmjrNJNf6CMi09Qr4rNEMSBWmxTY+lPOXh3cdjmUeJwn6/sB5Z01frjJl9lc/o7z7cTNo9xF4ps8J+/XTVW1IvJ/o6JjWuvtZRwD9hzLM7WXUYgmZ+KxKJi8v4xjBO94hr7t+8Ga69ns1I1bLJKxrZOrpMbtLrlPHPEHIRPmJRUQac6Y+miwCaVl/S6gXkFNobQFpOCsj+ZgKCGFKTp9JZIo8MSvxB7SZQcNV5BCGYLz6TRifMCNNpvJan69mWzb92lumZyubIA+k+C8YR3aGI2xgRb2mQyky+zw/EG6ZWiII9SHmJJTiok4SGFFyHFIhodvlmsMkMKPP4t4L2nD3/s18HWLtato33B7d46GcNYr0GZtY2YdJALudjcSyU/sFBsKmzc1mTBM5me8qDdg55PZZBZb1vpQozkoZ1xqwvYzyn6UpdtP2wXrb5Qs0DZMXYXaSMpoXTf6u4Sdv5mCUpxPl9B1K/T0yFXfy+eXhlh8yxS8ImtciRjLrFdQEhbE0dI4NXA3FHe1kMQCrxop4GQt9GoXcZPn5MI/sdlBc97/eliI1+NCr20hMYxvsuzxDVIABTaKFXsofuugQrNpcCPYgVN+fwECySa1
+sidebar_class_name: "post api-method"
+info_path: docs/api/api-key/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create API Key"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api-key"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create an API key for the user.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"The name of the API key."},"expiresTime":{"type":"number","description":"The expiration days of the API key."}},"required":["name","expiresTime"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"API key created successfully.","content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"The name of the API key."},"prefix":{"type":"string","description":"The prefix of the API key."},"key":{"type":"string","description":"The key of the API key."},"address":{"type":"string","description":"The address of the user."}}}}}},"400":{"description":"Bad request - max API keys per address reached"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

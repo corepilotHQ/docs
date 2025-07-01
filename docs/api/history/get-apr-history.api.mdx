@@ -1,0 +1,63 @@
+---
+id: get-apr-history
+title: "Get APR history"
+description: "Get the APR history."
+sidebar_label: "Get APR history"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE2L2zAQ/Stizk6cLbsX35JQlmUpLN0UCiEHWZ6NtbUlrTQOcY3/exk5n+4WGl9sNHpvPt4bd1BgUF470tZABo9IgkoU85fvotSBrG+nkIDH4KwJGCDr4Mtsxq9r4GujFIbw1lRVKzyS17jDYsyjrCE0xHDpXKWVZHj6Hpijg6BKrCV/UesQMpDeyxYS0IR1uDi3+TsqggSctw496aEysu5haT3Onb+4HMhrs4VkVPGqREHWiQehrI8dT6FPIseC1I0Ui9XyxMB03+T+msE0dY7+U4aYvpb7E0FO6hY85x7DtfnvBiJcm+vyb8AP5Z8IhieB+89cspCF8PjRYCAxEdrsZKXZJE/iF7bAsBqptAVksMWor6QSMkgPHkoDSQqQQEC/Qx8gW3fQ+AoyKIlcyNJUOj0JJLfabKf53f12um9/p1yj05Ul6DcMVo3X1Ea0dPoZ+XNzGXplJw6mOl44m3I4SEBzSyXKIgpjZM3Rn5P5y9Pk+dCONm82QjVVHF0eC+Gm/xonD6KwqqnRUNwMMb7PTQ9376az6Yz1cjZQLeP+HErgJb5YvHGa7ryG/9r3Q6eEe0pdJbXhRHHO3UGSNZzZB1E2CZQ2EIe6LpcBf/iq7/n4o0EfJ5zATnotcx7FetMnx+GxDmyADOZKoWPhd7JqhmGPfhOs0skkj19X0Pd/AJOhmkg=
+sidebar_class_name: "get api-method"
+info_path: docs/api/history/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get APR history"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/history/stats"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the APR history.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved APR history.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"top5CoreApr":{"type":"string","description":"The top 5 core APR."},"top5BtcApr":{"type":"string","description":"The top 5 BTC APR."},"coreMaxApr":{"type":"number","description":"The core max APR."},"btcMaxApr":{"type":"number","description":"The BTC max APR."},"btcMinApr":{"type":"string","description":"The BTC min APR."},"coreMinApr":{"type":"string","description":"The core min APR."}}}}}}},"400":{"description":"Bad request - invalid API key"}}}
+>
+  
+</StatusCodes>
+
+
+      

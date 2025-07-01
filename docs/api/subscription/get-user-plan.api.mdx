@@ -1,0 +1,63 @@
+---
+id: get-user-plan
+title: "Get User Plan"
+description: "Get the subscription plan of the user."
+sidebar_label: "Get User Plan"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMtu2zAQ/BVhz6ofRU66GUUbpCcDsdGD4QMlrS0mEslwl4YdQf9eLC278gOBq4sEanZmuTNkCyVS4bVjbQ1k8IyccIUJhfy8nLhamcRu4o9A6EeQAmERvOYDZKsWVFEg0cK+o4Fste7WKXgkZw0hQdbC98lEXpdSryFWbUJdHxKP7DXusIxiIlBYw2hY6pRztS6U1I3fSIpboKLCRskXHxxCBjZ/w4IhBeetQ8/6KK3K0iPRAEjstdlCetXOosKkB1/utUtBenqMwagGT+U3M4xcH8HysG8Tmhz9XbIIfYBtSVj+D2MgLL+mxb3THmnGj+06wqM/CesGiVXjvhKITwpP92KxNCpwZb3+xBIiaHoHROgvmY3lZGODKUGYG+TKlpDBFmMkFFeQwXhYETPsd+gpRjj4GjKomB1l47Fy+hux2mqzHeXTp+1of/gcF9aj07VlkICfDsCrBLHP2vAYnOcmnCIWcZBBjspHe44fv6xvFEMGv/8sYu/abGws11wL/sdJNpnNX27GP5u/JKUtQoOGjw5c42WLR+x0NBlNYp4tcXOMtAS2P/dxqHOJ+pVI++8wPn5B9Ltn3PPY1UobEY5Tbns/VnDhxzqFyhLLetvminDp666T5Y+AXi6adQo75bXKZS6rdZdChapEHw18x4OMoyjQieU7VQfRv7k7xLtzPJ5/LiAFCdzAsCuDInv/S5nDgLttj4joeNdB2jfBMQHduuu6v/xh3gQ=
+sidebar_class_name: "get api-method"
+info_path: docs/api/subscription/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get User Plan"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/subscription"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the subscription plan of the user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved plan.","content":{"application/json":{"schema":{"type":"object","properties":{"address":{"type":"string","description":"The address of the user."},"plan":{"type":"string","description":"The name of the subscription plan."},"quota":{"type":"number","description":"The quota of the subscription plan."},"quotaUsed":{"type":"number","description":"The quota used of the subscription plan."},"expiresAt":{"type":"string","description":"The expiration timestamp of the subscription plan."}}}}}},"400":{"description":"Unauthorized"},"401":{"description":"User subscription not found"}}}
+>
+  
+</StatusCodes>
+
+
+      

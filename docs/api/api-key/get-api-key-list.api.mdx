@@ -1,0 +1,63 @@
+---
+id: get-api-key-list
+title: "Get API Key List"
+description: "Get the list of API keys for the user."
+sidebar_label: "Get API Key List"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v2zAM/SsCz26SDj351g1rsY/DgLXYIchBkZlYrS2pJB3ENfzfB8pp2qY9xBcb0uMT9d6jB6iQHfkkPgYo4RbFSI2m8Swmbsz1nx/mEXs2m0h5o2OkGRRAyCkGRoZygC+Lhb7eUx1LCYU87rAy3DmHzJuuaXolcTEIBtFam1LjndXa+QMrwQDsamytfkmfEEqwRLaHArxgy2/W4/oBnUABiWJCEj+1FWyLb1As5MMWipM+72o0itTr6g0Pfc9gVD7c+P15HBP2MxbcJ0/I13IeUYZnJYz4Fllsmz6jtVVFyHwe6QH8wjPZOE5PAVefGfjVVobwqUMWc2Fau39NQ0I6MhJaV2MFmebyI819sJ3UkfyzgsYCWpQ6VlDCFrNnVmooYW6Tv3hEtZeRdkgM5XKAjhoooRZJXM4zhsVufdjO1pdX29m+f567SJh8EwXGlRa7jrz0udrmvN3FRwxQLldv9/9quKacvEMdxdQztZmMgxLWaAkJisPHTaTWCpTw899dvpYPm5jLvTSK//bSlsr2wROVsoquazHI5PUpXiWYsJezxWyR4xhZWhtes53nVal+YW9+e5bTc4bXGTt/tg8CCO5lnhrrg56djRgObi3hxa1VAXVk0aVhWFvGe2rGUZefOiR1YVXAzpK3a1VluRoLqNFWSNkgpSjh2jlM2vvONl0e9NO/gTp3zM3td1X8P7KunCg=
+sidebar_class_name: "get api-method"
+info_path: docs/api/api-key/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get API Key List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/api-key"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the list of API keys for the user.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"API keys retrieved successfully.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the API key."},"prefix":{"type":"string","description":"The prefix of the API key."},"expiresAt":{"type":"string","description":"The expiration timestamp of the API key."},"address":{"type":"string","description":"The address of the user."}}}}}}},"400":{"description":"Bad request - max API keys per address reached"},"401":{"description":"Unauthorized"}}}
+>
+  
+</StatusCodes>
+
+
+      

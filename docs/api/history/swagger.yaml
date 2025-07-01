@@ -1,0 +1,91 @@
+openapi: 3.0.0
+info:
+  title: Corepilot API
+  description: API documentation Corepilot API
+  version: 1.0.0
+servers:
+  - url: https://api-staging.b14g.xyz/corepilot
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - apiKey: []
+paths:
+  /history/stats:
+    get:
+      summary: Get APR history
+      description: Get the APR history.
+      responses:
+        "200":
+          description: Successfully retrieved APR history.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    top5CoreApr:
+                      type: string
+                      description: The top 5 core APR.
+                    top5BtcApr:
+                      type: string
+                      description: The top 5 BTC APR.
+                    coreMaxApr:
+                      type: number
+                      description: The core max APR.
+                    btcMaxApr:
+                      type: number
+                      description: The BTC max APR.
+                    btcMinApr:
+                      type: string
+                      description: The BTC min APR.
+                    coreMinApr:
+                      type: string
+                      description: The core min APR.
+        "400":
+          description: Bad request - invalid API key
+  /history/{address}:
+    get:
+      summary: Get APR history by validator address
+      description: Get the APR history by validator address.
+      parameters:
+        - name: address
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The validator address.
+      responses:
+        "200":
+          description: Successfully retrieved APR history by validator address.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    top5CoreApr:
+                      type: string
+                      description: The top 5 core APR.
+                    top5BtcApr:
+                      type: string
+                      description: The top 5 BTC APR.
+                    coreMaxApr:
+                      type: number
+                      description: The core max APR.
+                    btcMaxApr:
+                      type: number
+                      description: The BTC max APR.
+                    btcMinApr:
+                      type: string
+                      description: The BTC min APR.
+                    coreMinApr:
+                      type: string
+                      description: The core min APR.
+        "400":
+          description: Bad request - invalid API key
