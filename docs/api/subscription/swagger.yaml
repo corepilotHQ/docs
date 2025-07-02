@@ -4,7 +4,7 @@ info:
   description: API documentation Corepilot API
   version: 1.0.0
 servers:
-  - url: https://api-staging.b14g.xyz/corepilot
+  - url: https://api.corepilot.finance/corepilot
 components:
   securitySchemes:
     accessToken:

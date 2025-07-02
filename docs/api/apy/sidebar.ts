@@ -16,6 +16,12 @@ const sidebar: SidebarsConfig = {
           label: "Get Next Round APY",
           className: "api-method get",
         },
+        {
+          type: "doc",
+          id: "api/apy/get-next-2-round-apy",
+          label: "Get Next 2 Round APY",
+          className: "api-method get",
+        },
       ],
     },
   ],
