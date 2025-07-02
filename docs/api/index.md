@@ -47,7 +47,7 @@ Retrieve historical APR (Annual Percentage Rate) data.
 
 ## Base URL
 
-All API endpoints are relative to the base URL: `https://api.corepilot.com`
+All API endpoints are relative to the base URL: `https://api.corepilot.finance`
 
 ## Rate Limiting
 
