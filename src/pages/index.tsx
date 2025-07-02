@@ -4,7 +4,7 @@ import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 import type { ReactNode } from "react";
-
+import { version } from "../../package.json";
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -22,6 +22,7 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
+  console.log(version);
   return (
     <Layout
       title={`Corepilot`}
