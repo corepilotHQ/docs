@@ -2,6 +2,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 import { themes as prismThemes } from "prism-react-renderer";
+import { version } from "./package.json";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -171,7 +172,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Corepilot, All Rights Reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Corepilot, All Rights Reserved. v${version}`,
     },
     prism: {
       theme: prismThemes.github,
