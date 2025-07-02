@@ -16,6 +16,12 @@ const sidebar: SidebarsConfig = {
           label: "Sign in",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/auth/refresh-token",
+          label: "Refresh token",
+          className: "api-method post",
+        },
       ],
     },
   ],

@@ -13,13 +13,13 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "api/history/get-apr-history",
-          label: "Get APR history.",
+          label: "Get APR history",
           className: "api-method get",
         },
         {
           type: "doc",
           id: "api/history/get-apr-history-by-validator-address",
-          label: "Get APR history by validator address.",
+          label: "Get APR history by validator address",
           className: "api-method get",
         },
       ],

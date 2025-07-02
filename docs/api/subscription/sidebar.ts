@@ -25,7 +25,7 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "api/subscription/subscribe",
-          label: "Subscribe to a subscription plan",
+          label: "Subscribe",
           className: "api-method post",
         },
       ],
