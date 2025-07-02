@@ -67,5 +67,71 @@ Sign in to the Corepilot API.
   
 </StatusCodes>
 
+## Signature Generation Guide
+
+To sign in to the Corepilot API, you need to create a digital signature using the EIP-712 standard. Below is a comprehensive guide:
+
+### Example with ethers.js
+
+```javascript
+import { ethers } from 'ethers';
+
+async function signInWithWallet() {
+  // Connect to wallet
+  const provider = new ethers.BrowserProvider(window.ethereum);
+  const signer = await provider.getSigner();
+  
+  // Domain and types structure
+  const domain = {
+    name: "B14GSignIn",
+    version: "1",
+  };
+
+  const types = {
+    SignIn: [
+      { name: "message", type: "string" },
+      { name: "deadline", type: "uint256" },
+    ],
+  };
+
+  // Create deadline (1 hour from now)
+  const deadline = Date.now() + 60 * 60 * 1000;
+  
+  const message = { 
+    message: "Sign in with b14g", 
+    deadline 
+  };
+
+  try {
+    // Sign message with EIP-712
+    const signature = await signer.signTypedData(domain, types, message);
+    
+    // Send request to API
+    const response = await fetch('/auth/sign-in', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        signature: signature,
+        deadline: deadline
+      })
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok) {
+      console.log('Sign in successful:', result);
+      // Store accessToken and refreshToken
+      localStorage.setItem('accessToken', result.accessToken);
+      localStorage.setItem('refreshToken', result.refreshToken);
+    } else {
+      console.error('Sign in error:', result);
+    }
+  } catch (error) {
+    console.error('Error signing message:', error);
+  }
+}
+```
 
       
