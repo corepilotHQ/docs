@@ -17,7 +17,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://docs.corepilot.finance/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -97,11 +97,11 @@ const config: Config = {
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
-    image: "img/logo.avif",
+    image: "img/logo.png",
     navbar: {
       logo: {
         alt: "b14g",
-        src: "img/logo.avif",
+        src: "img/logo.png",
       },
       items: [
         {
@@ -113,17 +113,17 @@ const config: Config = {
           activeBaseRegex: `/docs/`,
         },
         {
-          href: "https://x.com/b14g_network",
+          href: "#",
           label: "X",
           position: "right",
         },
         {
-          href: "https://discord.com/invite/hJJmxmJ2Hk",
+          href: "#",
           label: "Discord",
           position: "right",
         },
         {
-          href: "https://t.me/b14g_network",
+          href: "#",
           label: "Telegram",
           position: "right",
         },
@@ -159,15 +159,15 @@ const config: Config = {
           items: [
             {
               label: "Telegram",
-              href: "https://t.me/b14g_network",
+              href: "#",
             },
             {
               label: "Discord",
-              href: "https://discord.com/invite/hJJmxmJ2Hk",
+              href: "#",
             },
             {
               label: "X",
-              href: "https://x.com/b14g_network",
+              href: "#",
             },
           ],
         },
