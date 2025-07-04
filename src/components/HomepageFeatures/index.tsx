@@ -13,8 +13,8 @@ const FeatureList: FeatureItem[] = [
     title: "The Problem",
     description: (
       <>
-        CORE Satoshi Consensus Plus has 11 validators, but they're not created
-        equal. Some validators offer 8.74% APR while others only provide 23.0% –
+        CORE Satoshi Consensus Plus has 31 validators, but they're not created
+        equal. Some validators offer 5.80% APR while others only provide 4.28% –
         that's a significant difference in rewards.
       </>
     ),

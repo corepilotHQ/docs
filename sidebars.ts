@@ -20,28 +20,28 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       label: "Corepilot API",
       items: [
-        {
-          type: "category",
-          collapsed: true,
-          label: "Auth",
-          items: ["api/auth/sign-in", "api/auth/refresh-token"],
-        },
-        {
-          type: "category",
-          collapsed: true,
-          label: "API Key",
-          items: ["api/api-key/create-api-key", "api/api-key/get-api-key-list"],
-        },
-        {
-          type: "category",
-          collapsed: true,
-          label: "Subscription",
-          items: [
-            "api/subscription/get-subscription-plans",
-            "api/subscription/subscribe",
-            "api/subscription/get-user-plan",
-          ],
-        },
+        // {
+        //   type: "category",
+        //   collapsed: true,
+        //   label: "Auth",
+        //   items: ["api/auth/sign-in", "api/auth/refresh-token"],
+        // },
+        // {
+        //   type: "category",
+        //   collapsed: true,
+        //   label: "API Key",
+        //   items: ["api/api-key/create-api-key", "api/api-key/get-api-key-list"],
+        // },
+        // {
+        //   type: "category",
+        //   collapsed: true,
+        //   label: "Subscription",
+        //   items: [
+        //     "api/subscription/get-subscription-plans",
+        //     "api/subscription/subscribe",
+        //     "api/subscription/get-user-plan",
+        //   ],
+        // },
         {
           type: "category",
           collapsed: true,
