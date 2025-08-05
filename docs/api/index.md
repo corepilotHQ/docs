@@ -14,7 +14,7 @@ Welcome to the Corepilot API documentation. This API provides comprehensive acce
 
 ### Authentication
 Manage user authentication and token refresh.
-- [Sign In](./auth/sign-in)
+- [Sign In / Sign Up](./auth/sign-in-sign-up)
 - [Refresh Token](./auth/refresh-token)
 
 ### API Key Management
@@ -36,8 +36,8 @@ Access Annual Percentage Yield (APY) information for staking rewards.
 
 ### Historical Data
 Retrieve historical APR (Annual Percentage Rate) data.
-- [Get APR History](./history/get-apr-history)
-- [Get APR History by Validator Address](./history/get-apr-history-by-validator-address)
+- [Get APR History Statistics](./history/get-apr-history-statistics)
+- [Get APR History Statistics by Validator Address](./history/get-apr-history-statistics-by-validator-address)
 
 <!-- ## Getting Started
 
