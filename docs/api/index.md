@@ -12,7 +12,7 @@ Welcome to the Corepilot API documentation. This API provides comprehensive acce
 
 ## API Sections
 
-<!-- ### Authentication
+### Authentication
 Manage user authentication and token refresh.
 - [Sign In](./auth/sign-in)
 - [Refresh Token](./auth/refresh-token)
@@ -26,12 +26,13 @@ Create and manage your API keys for accessing the Corepilot services.
 Manage your subscription plans and user subscriptions.
 - [Get Subscription Plans](./subscription/get-subscription-plans)
 - [Subscribe](./subscription/subscribe)
-- [Get User Plan](./subscription/get-user-plan) -->
+- [Get User Plan](./subscription/get-user-plan)
 
 ### APY Information
 Access Annual Percentage Yield (APY) information for staking rewards.
+- [Get Current Round APY](./apy/get-current-round-apy)
 - [Get Next Round APY](./apy/get-next-round-apy)
-- [Get Next 2 Round APY](./apy/get-next-2-round-apy)
+- [Optimize staking distribution](./apy/optimize-staking-distribution)
 
 ### Historical Data
 Retrieve historical APR (Annual Percentage Rate) data.
@@ -49,6 +50,6 @@ Retrieve historical APR (Annual Percentage Rate) data.
 
 All API endpoints are relative to the base URL: `https://api.corepilot.finance`
 
-<!-- ## Rate Limiting
+## Rate Limiting
 
-API rate limits depend on your subscription plan. Please refer to your subscription details for specific limits.  -->
+API rate limits depend on your subscription plan. Please refer to your subscription details for specific limits. 

@@ -9,7 +9,7 @@ import { version } from "./package.json";
 const config: Config = {
   title: "Corepilot",
   tagline: "Maximize Your CORE Staking Rewards",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -97,11 +97,12 @@ const config: Config = {
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
-    image: "img/logo.png",
+    image: "img/logo.svg",
     navbar: {
       logo: {
-        alt: "b14g",
-        src: "img/logo.png",
+        alt: "corepilot",
+        src: "img/logo.svg",
+        srcDark: "img/logo-black.svg",
       },
       items: [
         {

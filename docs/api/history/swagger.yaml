@@ -16,8 +16,8 @@ security:
 paths:
   /history/stats:
     get:
-      summary: Get APR history
-      description: Get the APR history.
+      summary: Get APR history statistics
+      description: Get APR history statistics for all rounds.
       responses:
         "200":
           description: Successfully retrieved APR history.
@@ -50,8 +50,8 @@ paths:
           description: Bad request - invalid API key
   /history/{address}:
     get:
-      summary: Get APR history by validator address
-      description: Get the APR history by validator address.
+      summary: Get APR history statistics by validator address
+      description: Get APR history statistics for a specific validator
       parameters:
         - name: address
           in: path

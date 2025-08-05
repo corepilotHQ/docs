@@ -8,8 +8,8 @@ servers:
 paths:
   /auth/sign-in:
     post:
-      summary: Sign in
-      description: Sign in to the Corepilot API.
+      summary: Sign in/ Sign up
+      description: Sign in to get access token and refresh token. Use access token to create API key, subscribe,...
       requestBody:
         required: true
         content:
@@ -45,7 +45,7 @@ paths:
   /auth/refresh-token:
     post:
       summary: Refresh token
-      description: Refresh the access token of the user.
+      description: When access token is expired, use refresh token to get new access token.
       requestBody:
         required: true
         content:
