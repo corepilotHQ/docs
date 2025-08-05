@@ -95,7 +95,10 @@ const config: Config = {
       },
     ],
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
   themeConfig: {
     image: "img/logo.svg",
     navbar: {
@@ -111,7 +114,15 @@ const config: Config = {
           position: "left",
           type: "docSidebar",
           sidebarId: "apiSidebar",
-          activeBaseRegex: `/docs/`,
+          activeBaseRegex: `/docs/api`,
+        },
+        {
+          to: "/docs/pCORE/pcore-overview",
+          label: "pCORE",
+          position: "left",
+          type: "docSidebar",
+          sidebarId: "pcoreSidebar",
+          activeBaseRegex: `/docs/pCORE`,
         },
         {
           href: "#",
