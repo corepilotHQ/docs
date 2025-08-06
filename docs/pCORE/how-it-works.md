@@ -12,7 +12,7 @@ sidebar_position: 1
 
 ```mermaid
 graph LR
-    A["User Stakes CORE"] --> B["Corepilot Protocol"]
+    A["User Deposits CORE"] --> B["Corepilot Protocol"]
     B --> C["Distribute to Validators"]
     B --> D["Mint pCORE to User"]
     C --> E["Earn Rewards"]
@@ -21,7 +21,7 @@ graph LR
 
 1. **Deposit CORE**: Users deposit CORE or WCORE tokens into the Corepilot protocol
 2. **Automatic Distribution**: The protocol distributes CORE to optimal validators
-3. **Receive pCORE**: Users receive pCORE tokens representing their stake
+3. **Receive pCORE**: Users receive pCORE tokens representing their deposit
 4. **Earn Rewards**: Rewards accrue to the protocol, increasing pCORE value
 
 #### Example
@@ -35,12 +35,12 @@ graph LR
 The pCORE to CORE exchange rate increases over time as staking rewards are earned:
 
 ```
-Exchange Rate = (Total CORE Staked + Accumulated Rewards) / Total pCORE Supply
+Exchange Rate = (Total CORE Deposited + Accumulated Rewards) / Total pCORE Supply
 ```
 
-### Example
+#### Example
 
-- **Initial State**: 1,000 CORE staked → 1,000 pCORE minted → Exchange Rate = 1.00
+- **Initial State**: 1,000 CORE deposited → 1,000 pCORE minted → Exchange Rate = 1.00
 - **After Rewards**: 1,500 CORE (1,000 + 500 rewards) → 1,000 pCORE → Exchange Rate = 1.5
 - **User Benefit**: Each pCORE token is now worth 1.5 CORE
 
@@ -133,9 +133,3 @@ Since these restrictions also apply to pCORE, it must adhere to the same rules w
 - **Real-time Accrual**: Rewards are continuously added to the vault
 - **No Manual Action**: Users don't need to claim or restake rewards
 - **Compound Growth**: Rewards earn additional rewards over time
-
-## 7. Share Calculation
-
-- **Shares Received**: `deposit_amount × total_shares / total_assets`
-- **Assets Received**: `shares_burned × total_assets / total_shares`
-- **Preview Functions**: Users can preview exact amounts before transactions
