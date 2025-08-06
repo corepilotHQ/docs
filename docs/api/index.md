@@ -8,7 +8,27 @@ sidebar_position: 0
 
 # Corepilot API Documentation
 
-Welcome to the Corepilot API documentation. This API provides comprehensive access to maximize your CORE staking rewards.
+Welcome to the Corepilot API documentation. The Corepilot API is a powerful RESTful service designed to help CORE blockchain stakers optimize their staking strategies and maximize their rewards. Whether you're an individual staker, a DeFi protocol, or a financial application, our API provides the tools and data you need to make informed staking decisions.
+
+### Key Features
+
+- **Real-time APY Data**: Access current and projected Annual Percentage Yields for optimal staking timing
+- **Staking Optimization**: Get intelligent recommendations for distributing your stakes across validators
+- **Historical Analytics**: Analyze past performance trends to inform future staking strategies  
+- **Multi-validator Support**: Compare and select from various validators to diversify your staking portfolio
+
+### Who Should Use This API?
+
+- **Individual Stakers**: Maximize your personal CORE staking rewards with data-driven insights
+- **DeFi Protocols**: Integrate automated staking optimization into your yield farming strategies
+- **Portfolio Management Tools**: Offer your users advanced CORE staking analytics and recommendations
+- **Financial Applications**: Provide comprehensive CORE staking services to your customers
+
+### Use Cases
+
+- **Yield Optimization**: Automatically rebalance stakes when better opportunities arise
+- **Risk Management**: Monitor validator performance and adjust distributions accordingly
+- **Strategic Planning**: Use APY forecasts to plan staking strategies
 
 ## API Sections
 
