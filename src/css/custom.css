@@ -8,14 +8,20 @@
 :root {
   --ifm-color-primary: #2987e6;
   --ifm-heading-color: #2987e6;
+  --title: black;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-color-primary: #2987e6;
   --ifm-heading-color: #2987e6;
+  --title: white;
 }
 
 .hero__title {
-  color: white;
+  color: var(--title);
+}
+
+.navbar__brand {
+  margin: 0;
 }

@@ -60,7 +60,7 @@ paths:
           description: Unauthorized
     get:
       summary: Get API Key List
-      description: Get the list of API keys for the user.
+      description: Get the list of API keys of the user.
       responses:
         "200":
           description: API keys retrieved successfully.

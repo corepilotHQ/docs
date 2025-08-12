@@ -1,0 +1,71 @@
+---
+id: optimize-staking-distribution
+title: "Optimize staking distribution"
+description: "Calculates optimal distribution of funds across validators to maximize APY."
+sidebar_label: "Optimize staking distribution"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVsuO2zoM/RWBqxZwnp304V3a20XQRYN5FPdikAVjMYlaW1IleSaZwP9eUM7Decx0BihQXG+iyBR5SJ5Daw2SfOaUDcpoSOET5lmZYyAvjA2qwFxI5YNT05IthJmJWamlF5g54724w1xJDMZ5EYwocKkK9UBiOP6vDQk4+lmSDx+NXEG6jn+VIwlpcCUlkBkdSAd+hdbmKkOO0fnuGcoafLagAnkVVpYgBTP9TlmABKwzllxQ5KNdwB8k/8HQtEXncAXJUXpD3uUk6jNCYkDBMFBppef7dARK6ch78gK1FFiYUgcPCahAhf89pp2jhimXUc9PMF0v6DQuJEBLLGzOB7vLXv/NxeDtu/cfuk+voEqgxvq8uJsy1EfEK6XFPanXB8F73XMPVFXS6OdtI+EdgknV8HN7UJOXpLTP6FEsybHz7of3794OLt70e0+vms77jzjnNJTkHH5X0ZHMaVvLYMSUthrKV3sVkTxf58Hz6twg+wbWpKpqI2+N9jX9+t0u/xzCuyqzjLyflYwn2wpdnhU6q/el8txK7s9L5NtfkMdw18dY8peJIwG0z8hrqHWJuRiTy0gHnJO4xECHEfrtwXPEVkeMXKgSuDjX/48oxWU9kUVLjHT0cjp6hHFiM7jjfITor3fq70ZjGRbGqQeSoiUK5b3S80So2nPCjmhpGbQYjkfiB63Y1+ActpEO5DTm4orcHTnx2TnjREvcaJzmxF2YUcgWDbQ1tCqBgsLCSEjBGh9ZhmEBKXTQrjqR2uqBS+qjYx8nUelySGERgvVpp4NWtTPjyKrchPZMadQZdXY7UE34dFY6FVbxOFr1hXg5ab66Yj3U1N4a7KVRbySgONkFoSTuncaC3/7bGo5HLTbgfFhfl/sP5+ctFQ4/dP/jebodp4+OPC7TzMTyqRAtP22bwUQ6ldF4JKTJyoJFFK8px/bc+dq21+62YwhmS4Fxkm3a8HVDlih4vg00B+Jx0PV+PP7hS9OGMoGWoWNzVJrRRsauN9y+BbRMph27JwksmPzpLazXU/R04/Kq4u2fJbnI1ATu0CkWU+RtsiUhE4mFyTWO+bSuOT6b52VN3aPRz+yoTwyzjGx40nbS0Of469U1JDDd3AYLI/mMw3u+KeI9pLDJyeioori3hhz1vMQ529Y++fkFNY910A==
+sidebar_class_name: "post api-method"
+info_path: docs/api/apy/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Optimize staking distribution"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/apy/optimize"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Calculates optimal distribution of funds across validators to maximize APY.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"stakedData":{"type":"array","description":"Array of staked data containing validator addresses and amounts","items":{"type":"object","properties":{"validator":{"type":"string","description":"The validator address","example":"0x1234567890123456789012345678901234567890"},"amount":{"type":"string","description":"The staked amount (in wei)","example":"1000000000000000000000"}},"required":["validator","amount"]},"example":[{"validator":"0x1234567890123456789012345678901234567890","amount":"1000000000000000000000"},{"validator":"0x0987654321098765432109876543210987654321","amount":"2000000000000000000000"}]},"idle":{"type":"string","description":"Idle amount to be optimally distributed (in wei)","example":"5000000000000000000000"}},"required":["stakedData","idle"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully calculated optimal distribution.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"validator":{"type":"string","description":"Validator address","example":"0x1234567890123456789012345678901234567890"},"amount":{"type":"string","description":"Amount to stake (in wei)","example":"1000000000000000000000"},"apr":{"type":"string","description":"Annual Percentage Rate","example":"12.5"}},"required":["validator","amount","apr"]}}}}},"400":{"description":"Bad Request - Invalid validator address or request data"},"401":{"description":"Unauthorized - missing, invalid, or expired API key"},"500":{"description":"Internal Server Error - Unable to fetch validator data"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,163 @@
+---
+id: sign-in-sign-up
+title: "Sign in/ Sign up"
+description: "Sign in to get access token and refresh token. Use access token to create API key, subscribe,..."
+sidebar_label: "Sign in/ Sign up"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VD1v2zAQ/SvEzYzkFp20JUWHTg0aZzI8UNTZYiKRDHl0bAj678VRdqIoQdECRbWIot59vffIARqMOhhPxlmo4M7srTBWkBN7JKG0xhgFuUe0QtlGBNwFjO20U4j7iG8x5IQOqAjF9e138YgnKWKquUKNsigKkBDwKWGkG9ecoBrypwnYQEUhoQTtLKEl/qW874xW3Fr5ELm/AaJusVe8opNHqMDVD6gJJPjgPAYyGDPO7K2iFHAGjRSM3YNczLxuUbzAhdsJalGkiKGAkbGq6Yyd57GprzF8mOeCvqR5yVvAOMrZsJtZh7Mi23GccNE7G6dRPq9W/FoIlTLtu9R1p1wFG2Es8/uPCJxkXbOqf0bhGx8sWTz75i/SvXHaIt84sfTlI2JuFLs0W0xczXTFo2fmhQvC2IPqTDNJ0iO1roEKvIuZBUUtVFCqRG3J4VfGgoSI4YAhQrUZIIUOKmiJfKzKUnlTaBfQm85RsTNWWY3lyw6MWwlM/s9X3387qt53uPDpnI2L51ajBGN3LnNmiGPg6yU1n7F33PG5a5xOPVrKyoslnueYsJ+KVbFieXj2XmVlrOrx9SIoRV4kv6wzvPrsf1waZ78QHqn0nTKWu846DGfFNsCKsVJnzbYSWpa02sAw1CrifejGkbefEoYTVJuthIMKRtVM62Y7SmhRNRiyyI94ylznIa/WXJ/hXeI+3h2sUV4irrVGT7/Fbmeuu/1xtwYJ9fk27F3DMUE9802pnqECkOAy6flY5r0BOmX3Se0ZO+Xk5xc3ZwFr
+sidebar_class_name: "post api-method"
+info_path: docs/api/auth/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Sign in/ Sign up"}
+></Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/auth/sign-in"}
+  context={"endpoint"}
+></MethodEndpoint>
+
+Sign in to get access token and refresh token. Use access token to create API key, subscribe,...
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+></Heading>
+
+<ParamsDetails parameters={undefined}></ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{
+    required: true,
+    content: {
+      "application/json": {
+        schema: {
+          type: "object",
+          properties: {
+            signature: {
+              type: "string",
+              description: "The signature of the user.",
+            },
+            deadline: {
+              type: "number",
+              description: "The deadline of the signature.",
+            },
+          },
+          required: ["signature", "deadline"],
+        },
+      },
+    },
+  }}
+></RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{
+    "200": {
+      description: "Successfully signed in.",
+      content: {
+        "application/json": {
+          schema: {
+            type: "object",
+            properties: {
+              accessToken: {
+                type: "string",
+                description: "The access token of the user.",
+              },
+              refreshToken: {
+                type: "string",
+                description: "The refresh token of the user.",
+              },
+            },
+          },
+        },
+      },
+    },
+    "400": { description: "Bad request - signature expired or invalid." },
+  }}
+></StatusCodes>
+
+## Signature Generation Guide
+
+To sign in to the Corepilot API, you need to create a digital signature using the EIP-712 standard. Below is a comprehensive guide:
+
+### Example with ethers.js
+
+```javascript
+import { ethers } from "ethers";
+
+async function signInWithWallet() {
+  // Connect to wallet
+  const provider = new ethers.BrowserProvider(window.ethereum);
+  const signer = await provider.getSigner();
+
+  // Domain and types structure
+  const domain = {
+    name: "CorepilotSignIn",
+    version: "1",
+  };
+
+  const types = {
+    SignIn: [
+      { name: "message", type: "string" },
+      { name: "deadline", type: "uint256" },
+    ],
+  };
+
+  // Create deadline (1 hour from now)
+  const deadline = Date.now() + 60 * 60 * 1000;
+
+  const message = {
+    message: "Sign in with Corepilot",
+    deadline,
+  };
+
+  try {
+    // Sign message with EIP-712
+    const signature = await signer.signTypedData(domain, types, message);
+
+    // Send request to API
+    const response = await fetch("/auth/sign-in", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        signature: signature,
+        deadline: deadline,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      console.log("Sign in successful:", result);
+      // Store accessToken and refreshToken
+      localStorage.setItem("accessToken", result.accessToken);
+      localStorage.setItem("refreshToken", result.refreshToken);
+    } else {
+      console.error("Sign in error:", result);
+    }
+  } catch (error) {
+    console.error("Error signing message:", error);
+  }
+}
+```

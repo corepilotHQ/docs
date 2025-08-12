@@ -14,10 +14,38 @@ components:
 security:
   - apiKey: []
 paths:
+  /apy/current:
+    get:
+      summary: Get Current Round APY
+      description: Get current round APY for all validators.
+      responses:
+        "200":
+          description: Successfully retrieved current round APY.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    validator:
+                      type: string
+                      description: The validator address.
+                    core:
+                      type: number
+                      description: The core APY.
+                    btc:
+                      type: number
+                      description: The BTC APY.
+                    avgHashReward:
+                      type: string
+                      description: The average hash reward.
+        "400":
+          description: Bad request - invalid API key
   /apy/next-round:
     get:
       summary: Get Next Round APY
-      description: Get the next round APY.
+      description: Get next round APY for all validators.
       responses:
         "200":
           description: Successfully retrieved next round APY.
@@ -42,13 +70,49 @@ paths:
                       description: The average hash reward.
         "400":
           description: Bad request - invalid API key
-  /apy/next-2-round:
-    get:
-      summary: Get Next 2 Round APY
-      description: Get the next 2 round APY.
+  /apy/optimize:
+    post:
+      summary: Optimize staking distribution
+      description: Calculates optimal distribution of funds across validators to maximize APY.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                stakedData:
+                  type: array
+                  description: Array of staked data containing validator addresses and amounts
+                  items:
+                    type: object
+                    properties:
+                      validator:
+                        type: string
+                        description: The validator address
+                        example: "0x1234567890123456789012345678901234567890"
+                      amount:
+                        type: string
+                        description: The staked amount (in wei)
+                        example: "1000000000000000000000"
+                    required:
+                      - validator
+                      - amount
+                  example:
+                    - validator: "0x1234567890123456789012345678901234567890"
+                      amount: "1000000000000000000000"
+                    - validator: "0x0987654321098765432109876543210987654321"
+                      amount: "2000000000000000000000"
+                idle:
+                  type: string
+                  description: Idle amount to be optimally distributed (in wei)
+                  example: "5000000000000000000000"
+              required:
+                - stakedData
+                - idle
       responses:
         "200":
-          description: Successfully retrieved next 2 round APY.
+          description: Successfully calculated optimal distribution.
           content:
             application/json:
               schema:
@@ -58,15 +122,23 @@ paths:
                   properties:
                     validator:
                       type: string
-                      description: The validator address.
-                    core:
-                      type: number
-                      description: The core APY.
-                    btc:
-                      type: number
-                      description: The BTC APY.
-                    avgHashReward:
+                      description: Validator address
+                      example: "0x1234567890123456789012345678901234567890"
+                    amount:
                       type: string
-                      description: The average hash reward.
+                      description: Amount to stake (in wei)
+                      example: "1000000000000000000000"
+                    apr:
+                      type: string
+                      description: Annual Percentage Rate
+                      example: "12.5"
+                  required:
+                    - validator
+                    - amount
+                    - apr
         "400":
-          description: Bad request - invalid API key
+          description: Bad Request - Invalid validator address or request data
+        "401":
+          description: Unauthorized - missing, invalid, or expired API key
+        "500":
+          description: Internal Server Error - Unable to fetch validator data

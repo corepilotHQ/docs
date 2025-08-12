@@ -18,44 +18,42 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       collapsed: true,
-      label: "Corepilot API",
+      label: "Auth",
+      items: ["api/auth/sign-in-sign-up", "api/auth/refresh-token"],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "API Key",
+      items: ["api/api-key/create-api-key", "api/api-key/get-api-key-list"],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "Subscription",
       items: [
-        // {
-        //   type: "category",
-        //   collapsed: true,
-        //   label: "Auth",
-        //   items: ["api/auth/sign-in", "api/auth/refresh-token"],
-        // },
-        // {
-        //   type: "category",
-        //   collapsed: true,
-        //   label: "API Key",
-        //   items: ["api/api-key/create-api-key", "api/api-key/get-api-key-list"],
-        // },
-        // {
-        //   type: "category",
-        //   collapsed: true,
-        //   label: "Subscription",
-        //   items: [
-        //     "api/subscription/get-subscription-plans",
-        //     "api/subscription/subscribe",
-        //     "api/subscription/get-user-plan",
-        //   ],
-        // },
-        {
-          type: "category",
-          collapsed: true,
-          label: "APY",
-          items: ["api/apy/get-next-round-apy", "api/apy/get-next-2-round-apy"],
-        },
-        {
-          type: "category",
-          collapsed: true,
-          label: "History",
-          items: ["api/history/get-apr-history", "api/history/get-apr-history-by-validator-address"],
-        },
+        "api/subscription/get-subscription-plans",
+        "api/subscription/subscribe",
+        "api/subscription/get-user-plan",
       ],
     },
+    {
+      type: "category",
+      collapsed: true,
+      label: "APY",
+      items: ["api/apy/get-current-round-apy", "api/apy/get-next-round-apy", "api/apy/optimize-staking-distribution"],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "History",
+      items: ["api/history/get-apr-history-statistics", "api/history/get-apr-history-statistics-by-validator-address"],
+    },
+  ],
+  pcoreSidebar: [
+    "pCORE/pcore-overview",
+    "pCORE/how-pcore-works",
+    "pCORE/pcore-integration-guide",
   ],
 };
 

@@ -9,7 +9,7 @@ import { version } from "./package.json";
 const config: Config = {
   title: "Corepilot",
   tagline: "Maximize Your CORE Staking Rewards",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -95,13 +95,17 @@ const config: Config = {
       },
     ],
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
   themeConfig: {
-    image: "img/logo.png",
+    image: "img/logo.svg",
     navbar: {
       logo: {
-        alt: "b14g",
-        src: "img/logo.png",
+        alt: "corepilot",
+        src: "img/logo.svg",
+        srcDark: "img/logo-black.svg",
       },
       items: [
         {
@@ -110,7 +114,15 @@ const config: Config = {
           position: "left",
           type: "docSidebar",
           sidebarId: "apiSidebar",
-          activeBaseRegex: `/docs/`,
+          activeBaseRegex: `/docs/api`,
+        },
+        {
+          to: "/docs/pCORE/pcore-overview",
+          label: "pCORE",
+          position: "left",
+          type: "docSidebar",
+          sidebarId: "pcoreSidebar",
+          activeBaseRegex: `/docs/pCORE`,
         },
         {
           href: "#",

@@ -1,0 +1,63 @@
+---
+id: get-current-round-apy
+title: "Get Current Round APY"
+description: "Get current round APY for all validators."
+sidebar_label: "Get Current Round APY"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8Fu2zAM/RWBZ9fOhp18S4uhK3op2g7YUOTAyEyszpZUivYWGP73gXaSZmkPnS8WSD7q8T1qgIqSZRfFBQ8lXJMY2zGTF8Oh85VZ3v00m8AGm8b02LgKJXDKIQOmFINPlKAc4PNiob9/uz101lJKm65pdoZJ2FFP1dsLtJsNXsiLNsEYG2dRmxTPSTsNkGxNLepJdpGgBGTGHWTghNp0Eg/rZ7ICGUQOkVjczO9I/aQ0CTu/heyM9WNNr5MarCqmlHIYlSPTCd537Zr4XbxWzpONGazFfgx1+Xh1BGG//YapvqffyNXHSGNPjFsyNaba8ATMYZy/DL6859AlVobppaMk5sI4P81tlnc35hftQGEtSR0qKGFLk6ooNZRQYNwVex8hg0TcEyconwbouIESapGYyqLA6HIVI7omSL5xHr2l4hiBcaVo27GT3QTH6G5Jj6vT1IPaPzt5KHjdhDmQgdOJasJqktdjq9kfF8u7m4vb/TTOb8IEddJo9upARGd+I6rqUAXbteRlWkdzXq9Tz7Wf8kW+UONiSNLitLR7CvqorvY7f3/Y+fPLhtcX8F+vcC+C0B8pYoPOK4fJg2Fv1hNgVHkOdq0yqEMSTQzDGhN952YcNfzSEU/SZ9AjO1yrRk+rMTuoqgbpYpSwtJaiWt9j080unD1ate+4PNdfH2Ec/wLjyoLj
+sidebar_class_name: "get api-method"
+info_path: docs/api/apy/corepilot-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Current Round APY"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/apy/current"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get current round APY for all validators.
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successfully retrieved current round APY.","content":{"application/json":{"schema":{"type":"array","items":{"type":"object","properties":{"validator":{"type":"string","description":"The validator address."},"core":{"type":"number","description":"The core APY."},"btc":{"type":"number","description":"The BTC APY."},"avgHashReward":{"type":"string","description":"The average hash reward."}}}}}}},"400":{"description":"Bad request - invalid API key"}}}
+>
+  
+</StatusCodes>
+
+
+      
